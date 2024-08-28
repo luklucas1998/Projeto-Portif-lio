@@ -1,0 +1,500 @@
+ /* Define a fonte padrão para o corpo da página e remove margens e preenchimento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #201d29;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*Novo header*/
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header.a2{
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 200px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+header ul li{
+    margin: 0 40px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    padding: 6px 10px;
+    transition: 0.7s;
+}
+header ul li a:hover{
+    color: #0169F4;
+}
+
+header .menu-desktop ul li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0169F4;
+    border-radius: 5px;
+    transform: scale(0) translateY(50px); /* Corrigido */
+    opacity: 0;
+    transition: .8s;
+    
+}
+
+header .menu-desktop ul li  a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+header .social-icons svg{
+    color: #FFF;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .6s;
+}
+header .social-icons svg:hover{
+    transform: scale(1.25);
+}
+/*Fim do Novo header*/
+
+/* Menu mobile escondido por padrão */
+.menu-mobile {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Tornar o menu responsivo */
+@media (max-width: 768px) {
+    .menu-desktop {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        color: black;
+    }
+    
+    .menu-mobile {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background-color:#131118;
+        padding: 15px;
+        z-index: 1;
+        
+    }
+    
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        
+    }
+    
+    .menu-mobile ul li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        
+    }
+    .menu-mobile ul li a:hover{
+        color: #0169F4;
+        
+    }
+
+    .menu-mobile.show {
+        display: flex;
+    }
+    
+}
+/*Fim do menu responsivo*/
+
+
+
+/*Premeira sessão*/
+.contenier1{
+    height: 100vh;
+    width: 100%;
+    background: url(img/Design\ sem\ nome\ -\ 2024-07-13T161645.042.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background: cover;
+}
+
+.contenier1{
+    color: white;
+    display: flex;   
+}
+
+.contenier1 div{
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    font-weight: 200;
+}
+
+.contenier1 div h3{
+    color: #0169F4;
+
+}
+/*Fim da primeira sessão*/
+
+/*Segunda Sessão*/
+.conteiner2{
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+    background-color: #131118;
+    
+}
+.conteiner2 img{
+    height: 350px;
+    border-radius: 100%;
+    border: 5px solid #191720;
+    margin-right: 50px;
+}
+.conteiner2 h1{
+    color: white;
+}
+.conteiner2 p{
+    color: white;
+}
+
+/*botão do whatsApp 2ª sessão*/
+.conteiner2 button {
+    color: white;
+    background-color: #0169F4;
+    border-radius: 20px;
+    height: 45px;
+    width: 180px;
+    border: 1px solid #201d29;
+    cursor: pointer;
+    font-size: 12pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Adiciona espaçamento entre o ícone e o texto */
+    transition: background-color 0.8s, border 0.8s, color 0.8s; /* Transição suave para a cor de fundo, borda e texto */
+}
+
+.conteiner2 button:hover {
+    background-color: #131118;
+    border: 1px solid #0169F4;
+    transition: 0.5s;
+    color: white;
+}
+/*Fim da Segunda Sessão*/
+
+
+.projetos {
+    text-align: center;
+    color: #0169F4;
+}
+
+.conteiner3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; /* Certifica-se de que todos os itens terão a mesma altura */
+}
+
+.meus-projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui os itens de maneira uniforme */
+    width: 400px;
+    background-color: #131118;
+    margin: 10px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.meus-projetos h3 {
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+
+.meus-projetos p {
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço necessário */
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
+.meus-projetos button {
+    color: white;
+    background-color: #0169F4;
+    border-radius: 20px;
+    height: 45px;
+    width: 150px;
+    border: 1px solid #201d29;
+    cursor: pointer;
+    font-size: 12pt;
+    margin: 20px auto 0; /* Centraliza o botão horizontalmente */
+    transition: background-color 0.8s, border 0.8s, color 0.8s; /* Transição suave para a cor de fundo, borda e texto */
+}
+
+.meus-projetos button:hover {
+    background-color: #131118;
+    border: 1px solid #0169F4;
+    transition: 0.5s;
+    color: white;
+    
+}
+
+
+
+/*Sessão especialidades*/
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Certifica-se de que todos os itens terão a mesma altura */
+    margin-top: 30px;
+    gap: 60px;
+    cursor: pointer;
+}
+.flex .especialidade-box {
+    padding: 20px 40px;
+    color: #FFF;
+    font-size: 10pt;
+    font-weight: 500;
+    border: #0169F4 solid 1px;
+    border-radius: 10px;
+    transition: .7s;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo seja distribuído uniformemente */
+}
+
+.flex .especialidade-box:hover{
+    transform: scale(1.05);
+    box-shadow:0 0 20px #0169F4;
+}
+
+.flex .especialidade-box h1{
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.especialidade-box i{
+    font-size: 75px;
+    color: #0169F4;
+}
+section.Especialidades{
+    padding: 40px 4%;
+}
+h1.titulo-especialidades{
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+h1.titulo-especialidades span{
+    color: #0169F4;
+}
+/*Fim da sessão especialidades*/
+
+
+/**Inicio Tecnologias*/
+.skills-container {
+    width: 100vw; /* Largura total da tela */
+    height: 110px; /* Altura total da tela */
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-wrapper {
+    display: flex;
+    width: 200%; /* Largura para permitir o efeito de rotação */
+    animation: slide 15s linear infinite alternate;
+}
+
+.skills {
+    flex: 1;
+    min-width: 16.66%; /* Ajuste baseado no número total de itens */
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+    line-height: 60px;
+    background: #131118;
+    border: 1px solid #0169F4;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.skills:hover{
+    transform: scale(1.05);
+    box-shadow:0 0 10px #016af473;
+}
+
+.skills i {
+    margin-right: 10px;
+    font-size: 30px; /* Ajuste o tamanho dos ícones */
+    color: #FFF;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/**Fim Tecnologias*/
+
+/*Inicio Footer*/
+footer {
+    display: flex;
+    flex-direction: column; /* Organiza os filhos na vertical */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    height: 100px; /* Ajuste conforme necessário */
+    padding: 40px;
+    background-color: #191720;
+    color: #8d8d8d;
+    font-size: 10pt;
+}
+
+.logo-footer {
+    font-size: 24px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define a fonte como negrito */   
+}
+.logo-footer img{
+    max-width: 100%; /* Ajusta a largura da imagem ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 100px; 
+}
+/*Fim Footer*/
+
+/*WhatsAPP FLUTUANTE*/
+.whatsapp-button{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 3px #3d3d3d;
+    z-index: 1000;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+/*Ao passar o mouse ele fica de outro tonalidade*/
+.whatsapp-button:hover{
+    background-color: #1c9f47;
+}
+/*estilo do svg do botão de whatsapp*/
+.whatsapp-button svg{
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+
+
+/*Site*/
+@media screen and (max-width: 1000px) {
+    /*Cabeçalho*/
+    .Menu-nav, .social-icons{
+        display: none;/*icone some nessa largura de tela 1020*/ 
+    }
+    
+    .conteiner2{
+        flex-direction: column;/*flex column alinha um item abaixo do outro*/
+    }
+    
+    .conteiner3{
+        flex-direction: column;  
+        align-items: center; 
+    }
+    .conteiner3 .meus-projetos{
+        width: 70%;
+        
+    }
+    .conteiner3 .meus-projetos h3{
+        font-size: 25pt;
+    }
+    .conteiner3 .meus-projetos button{
+        font-size: 20pt;
+        width: 40%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .conteiner3 .meus-projetos p{
+        font-size: 20pt;
+    }
+
+
+    .habilidades{
+        flex-direction: column;   
+             
+    }
+
+    .flex{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .flex .especialidade-box{
+        width: 80%;
+        font-size: 13pt;
+    }
+}
+
+
+
+
+
